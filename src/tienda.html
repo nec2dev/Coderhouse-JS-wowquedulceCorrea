@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Wow!</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.svg">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-4 shadow-sm bg-white0">
+        <div class="container flex items-center justify-between">
+            <!-- logo -->
+            <a href="#">
+                <img src="../assets/images/logo.svg" class="w-32" alt="logo wow que dulce" />
+            </a>
+            <!-- searchbar -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text"
+                    class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+                    placeholder="Buscar" />
+                <button
+                    class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition">
+                    Buscar
+                </button>
+            </div>
+            <!-- shoppinigkart -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Lista Deseos</div>
+                    <span
+                        class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">3</span>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="text-xs leading-3">Carrito</div>
+                    <span
+                        class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">8</span>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cuenta</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- navbar -->
+    <nav class="bg-gray-400">
+        <div class="container flex">
+            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white">Todas las categorías</span>
+                <div
+                    class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 001</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 002</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 003</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 004</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 005</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 006</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="#" class="text-gray-200 hover:text-white transmition">Home</a>
+                    <a href="tienda.html" class="text-gray-200 hover:text-white transmition">Tienda</a>
+                    <a href="#" class="text-gray-200 hover:text-white transmition">Nosotros</a>
+                    <a href="#" class="text-gray-200 hover:text-white transmition">Contactos</a>
+                </div>
+                <a href="#" class="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- breadcrums -->
+    <div class="container py-4 flex items-center">
+        <a href="index.html" class="text-primary text-base">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="text-sm text-gray-400">
+            <i class="fa fa-chevron-right"></i>
+        </span>
+        <p class="text-gray-600 font-medium"> Tienda</p>
+    </div>
+
+    <!-- tiendawrapper -->
+    <div class="container grid grid-cols-4 gap-6 pt-4 pb-16 items-start">
+        <!-- sidebar -->
+        <div class="col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hidden">
+            <div class="divide-y divide-gray-200 space-y-5">
+                <!-- Filtro por Categoría -->
+                <div class="pt-4">
+                    <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Categorías</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria001"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce001" class="text-gray-600 ml-3 cursor-pointer">Box dulce 01</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria002"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce002" class="text-gray-600 ml-3 cursor-pointer">Box dulce 02</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria003"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce003" class="text-gray-600 ml-3 cursor-pointer">Box dulce 03</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria004"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce004" class="text-gray-600 ml-3 cursor-pointer">Box dulce 04</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria005"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce005" class="text-gray-600 ml-3 cursor-pointer">Box dulce 05</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="categoria006"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="boxdulce006" class="text-gray-600 ml-3 cursor-pointer">Box dulce 06</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filtro por productos -->
+                <div class="pt-4">
+                    <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Productos</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="alfajores"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="alfajores" class="text-gray-600 ml-3 cursor-pointer">Alfajores</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="lemonpie"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="lemonpie" class="text-gray-600 ml-3 cursor-pointer">Lemon Pie</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="brownie"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="brownie" class="text-gray-600 ml-3 cursor-pointer">Brownie</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cheesescon"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="cheesescon" class="text-gray-600 ml-3 cursor-pointer">Scon de queso</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="conito"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="conito" class="text-gray-600 ml-3 cursor-pointer">Conito DDL</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="cinamonroll"
+                                class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                            <label for="cinamonroll" class="text-gray-600 ml-3 cursor-pointer">Roll de canela</label>
+                            <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro por Precio -->
+                <div class="pt-4">
+                    <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Precio</h3>
+                    <div class="mt-4 flex items-center">
+                        <input type="text"
+                            class="w-full border-gray-300 focus:border-primary focus:ring-0 px-3 py-1 text-gray-600 text-sm shadow-sm rounded"
+                            placeholder="min">
+                        <span class="mx-3 text-gray-500">-</span>
+                        <input type="text"
+                            class="w-full border-gray-300 focus:border-primary focus:ring-0 px-3 py-1 text-gray-600 text-sm shadow-sm rounded"
+                            placeholder="max">
+                    </div>
+                </div>
+
+                <!-- filtro por Personas -->
+                <div class="pt-4">
+                    <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">N° de Personas</h3>
+                    <div class="flex items-center gap-2">
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-1">
+                            <label for="people-1"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">1</label>
+                        </div>
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-2">
+                            <label for="people-2"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">2</label>
+                        </div>
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-3">
+                            <label for="people-3"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">3</label>
+                        </div>
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-5">
+                            <label for="people-5"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">5</label>
+                        </div>
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-10">
+                            <label for="people-10"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">10</label>
+                        </div>
+                        <div class="people-selector">
+                            <input type="radio" name="people" class="hidden" id="people-20">
+                            <label for="people-20"
+                                class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">20</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro por Sabor -->
+                <div class="pt-4">
+                    <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Sabor</h3>
+                    <div class="flex items-center gap-2">
+                        <div class="sabor-selector">
+                            <input type="radio" name="sabor" class="hidden" id="sabor-frutilla">
+                            <label for="sabor-frutilla"
+                                class="border border-gray-200 rounded-sm h-5 w-5 cursor-pointer shadow-sm"
+                                style="background-color: #fc3d57"></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Productos -->
+        <div class="col-span-3">
+            <div class="flex gap-2 ml-auto">
+                <select name=""
+                    class="w-44 text-sm text-gray-600 px-4 py-3 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary">
+                    <option value=" ">Orden por defecto</option>
+                    <option value=" ">Precio menor a mayor</option>
+                    <option value=" ">Precio mayor a menor</option>
+                    <option value=" ">Últimos productos</option>
+                </select>
+                <div class="flex gap-2 ml-auto">
+                    <div class="border border-primary w-10 h-9 flex items-center justify-center text-white bg-primary rounded cursor-pointer">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div class="border border-gray-300 w-10 h-9 flex items-center justify-center text-gray-600 rounded cursor-pointer">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-6 mt-6">
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow001.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 1</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow002.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 2</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow003.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 3</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow004.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 4</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow005.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 5</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded overflow-hidden group">
+                    <div class="relative">
+                        <img src="../assets/images/Wow006.jpg" class="w-full" alt="">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="" class="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <div class="pt-4 pb-3 px-4">
+                            <a href="#">
+                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Wow producto 6</h4>
+                            </a>
+                            <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                                <p class="text-xl text-primary font-semibold">$ 325.00</p>
+                                <p class="text-sm text-gray-400 line-through">$ 520.00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex gap-1 text-sm text-yellow-400">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                                <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            </div>
+                        </div>
+                        <a href="#" class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+        <div class="container grid grid-cols-3">
+            <div class="col-span-1 space-y-8">
+                <img src="../assets/images/logo.svg" class="w-32" alt="">
+                <p class="text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam exercitationem odit rem est
+                    minima,
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-span-2 grid grid-cols-4 gap-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- copyright -->
+    <div class="bg-gray-800 py-4">
+        <div class="container flex items-center justify-between">
+            <p class="text-white">@nec2solutions - All Rights reserved</p>
+        </div>
+    </div>
+
+    <!-- JS linked -->
+    <script src="../assets/js/variables.js"></script>
+    <script src="../assets/js/quoteGen.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
