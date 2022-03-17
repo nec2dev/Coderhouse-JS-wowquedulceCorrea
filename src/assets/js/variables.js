@@ -3,6 +3,7 @@ const carrito = [];
 
 const titulo = document.getElementById("titulo");
 const maincopy = document.getElementById("maincopy");
-const ul = document.getElementById("boxeslist");
+
+const boxeslist = document.getElementById("boxeslist");
 const kartlist = document.getElementById("kartlist");
 
