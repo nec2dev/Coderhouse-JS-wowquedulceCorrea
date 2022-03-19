@@ -1,92 +1,3 @@
-// const boxes = [
-//   {
-//       id: 001,
-//       nombre: 'Wow! Box001',
-//       precio: 560.00,
-//       precioAnterior: 620.00,
-//       imagen: '../assets/images/box001.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   },
-//   {
-//       id: 002,
-//       nombre: 'Wow! Box002',
-//       precio: 940.50,
-//       precioAnterior: 1020.00,
-//       imagen: '../assets/images/box002.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   },
-//   {
-//       id: 003,
-//       nombre: 'Wow! Box003',
-//       precio: 320.00,
-//       precioAnterior: 420.00,
-//       imagen: '../assets/images/box003.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   },
-//   {
-//       id: 004,
-//       nombre: 'Wow! Box004',
-//       precio: 450.00,
-//       precioAnterior: 620.00,
-//       imagen: '../assets/images/box004.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   },
-//   {
-//       id: 005,
-//       nombre: 'Wow! Box005',
-//       precio: 500.00,
-//       precioAnterior: 620.00,
-//       imagen: '../assets/images/box005.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   },
-//   {
-//       id: 006,
-//       nombre: 'Wow! Box006',
-//       precio: 1028.00,
-//       precioAnterior: 1320.00,
-//       imagen: '../assets/images/box006.jpg',
-//       medidas: '15 x 15 x 10 cm',
-//       peso: 3.20,
-//       personas: 4,
-//       numpiezas: 8,
-//       piezas: ['Brownie', 'Lemon Pie', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de maicena DDL', 'Alfajorcito de chocolate', 'Alfajorcito de chocolate'],
-//       sabores: ['ch', 'li', 'v-ddl', 'v-ddl', 'v-ddl', 'v-ddl', 'ch-ddl', 'ch-ddl']
-//   }
-
-// ];
-
-// let carrito = [];
-// const moneda = '$';
-// const DOMitems = document.querySelector('#items');
-// const DOMcarrito = document.querySelector('#carrito');
-// const DOMtotal = document.querySelector('#total');
-// const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-
 function listarBoxes() {
   //debugger
   boxes.forEach((info) => {
@@ -103,10 +14,10 @@ function listarBoxes() {
       miNodoImagen.setAttribute('src', info.imagen);
       const miNodoPrecio = document.createElement('p');
       miNodoPrecio.className = `text-xl text-primary font-semibold`;
-      miNodoPrecio.textContent = `${moneda} ${info.precio}`;
+      miNodoPrecio.textContent = `${moneda} ${info.precio.toFixed(2)}`;
       const miNodoPrecioAnterior = document.createElement('p');
       miNodoPrecioAnterior.className = `text-sm text-gray-400 line-through`;
-      miNodoPrecioAnterior.textContent = `${moneda} ${info.precioAnterior}`;
+      miNodoPrecioAnterior.textContent = `${moneda} ${info.precioAnterior.toFixed(2)}`;
       const miNodoPeso = document.createElement('p');
       miNodoPeso.textContent = `Peso: ${info.peso} Kg.`;
       const miNodoMedidas = document.createElement('p');
@@ -147,7 +58,7 @@ function mostrarCarrito() {
       }, 0);
       const miNodo = document.createElement('li');
       miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${moneda} ${miItem[0].precio}`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${moneda} ${miItem[0].precio.toFixed(2)}`;
       const miBoton = document.createElement('button');
       miBoton.classList.add('btn', 'btn-danger', 'mx-5');
       miBoton.textContent = 'X';
