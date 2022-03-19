@@ -80,6 +80,7 @@ const boxes = [
 
 ];
 
+let carrito = [];
 const moneda = '$';
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
