@@ -50,7 +50,8 @@
                     </div>
                     <div class="text-xs leading-3">Carrito</div>
                     <span
-                        class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs" id="numOfItemsCart">0</span>
+                        class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs"
+                        id="numOfItemsCart">0</span>
                 </a>
                 <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
                     <div class="text-2xl">
@@ -105,7 +106,8 @@
                     <a href="#" class="text-gray-200 hover:text-white transmition">Nosotros</a>
                     <a href="#" class="text-gray-200 hover:text-white transmition">Contactos</a>
                 </div>
-                <a href="../pages/login.html" class="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
+                <a href="../pages/login.html"
+                    class="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
             </div>
         </div>
     </nav>
@@ -299,112 +301,105 @@
                     </div>
                 </div>
             </div>
-
+            <div class="grid grid-cols-3 gap-6 mt-6" id="items"></div>
+            <div class="h-6"></div>
             <div>
-                <ul class="grid grid-cols-3 gap-6 mt-6" id="boxeslisted">
-                </ul>
-            </div>
-            <div class="">
-                <h3>Carrito</h3>
-            </div>
-            <div class="">
-                <ul class="" id="listCart">
-    
-                </ul>
-                <a class="" href="./checkout.html">
-                    <i class="">shopping_cart</i>
-                </a>
+                <h2>Carrito</h2>
+                <ul id="carrito"></ul>
+                <hr>
+                <p>Total: $<span id="total"></span></p>
+                <button id="boton-vaciar">Vaciar</button>
             </div>
 
-
-            <ul class="grid grid-cols-3 gap-6 mt-6" id="boxeslist">
-            </ul>
-        </div>
-    </div>
-
-    <!-- footer -->
-    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
-        <div class="container grid grid-cols-3">
-            <div class="col-span-1 space-y-8">
-                <img src="../assets/images/logo.svg" class="w-32" alt="">
-                <p class="text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam exercitationem odit rem est
-                    minima,
-                </p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-span-2 grid grid-cols-4 gap-8">
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
-                        <div class="mt-4 space-y-4">
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+            <!-- footer -->
+            <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+                <div class="container grid grid-cols-3">
+                    <div class="col-span-1 space-y-8">
+                        <img src="../assets/images/logo.svg" class="w-32" alt="">
+                        <p class="text-gray-500">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam exercitationem odit rem
+                            est
+                            minima,
+                        </p>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-2 grid grid-cols-4 gap-8">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                                <div class="mt-4 space-y-4">
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                                <div class="mt-4 space-y-4">
+                                    <a href="#"
+                                        class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                                    <a href="#"
+                                        class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                                <div class="mt-4 space-y-4">
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                                <div class="mt-4 space-y-4">
+                                    <a href="#"
+                                        class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                                    <a href="#"
+                                        class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                                    <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
-                        <div class="mt-4 space-y-4">
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
-                        <div class="mt-4 space-y-4">
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
-                        <div class="mt-4 space-y-4">
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
-                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        </footer>
+
+        <!-- copyright -->
+        <div class="bg-gray-800 py-4">
+            <div class="container flex items-center justify-between">
+                <p class="text-white">@nec2solutions - All Rights reserved</p>
             </div>
         </div>
-        </div>
-    </footer>
 
-    <!-- copyright -->
-    <div class="bg-gray-800 py-4">
-        <div class="container flex items-center justify-between">
-            <p class="text-white">@nec2solutions - All Rights reserved</p>
-        </div>
-    </div>
-
-    <!-- JS linked -->
-    <script src="../assets/js/tienda.js"></script>
+        <!-- JS linked -->
+        <!-- <script src="../assets/js/tienda.js"></script> -->
+        <script src="../assets/js/variables.js"></script>
 
 </body>
 
