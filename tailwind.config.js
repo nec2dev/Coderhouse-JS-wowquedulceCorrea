@@ -17,7 +17,8 @@ module.exports = {
         roboto: "'Roboto', sans-serif"
       },
       colors:{ 
-        'primary': '#FD3057'
+        'primary': '#FD3057',
+        'secondary': '#52d65f'
       }
     },
   },
