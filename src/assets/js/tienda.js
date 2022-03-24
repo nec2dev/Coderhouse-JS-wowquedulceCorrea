@@ -126,6 +126,7 @@ function agregarCaritoDeLocalStorage() {
 
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-agregarCaritoDeLocalStorage();
+
 listarBoxes();
 mostrarCarrito();
+agregarCaritoDeLocalStorage();
