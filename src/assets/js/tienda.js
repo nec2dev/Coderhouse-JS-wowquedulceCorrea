@@ -2,16 +2,17 @@ function listarBoxes() {
   //debugger
   boxes.forEach((info) => {
     const miNodo = document.createElement('div');
-    miNodo.className = `bg-white shadow rounded overflow-hidden group`;
+    miNodo.className = `bg-secondary shadow rounded overflow-hidden group`;
     const miNodoCardBody = document.createElement('div');
     miNodoCardBody.className = `relative`;
     const miNodoRollOver = document.createElement('div');
+    miNodoRollOver.style.backgroundImage = `url("../assets/images/box001.jpg")`;
     miNodoRollOver.className = `"absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition`;
     miNodoRollOver.innerHTML = "<a href='#' class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition'>"+
     "<i class='fas fa-search'></i></a><a href='#'class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition'>"+
     "<i class='fas fa-heart'></i></a>";
     const miNodoTitle = document.createElement('h4');
-    miNodoTitle.className = `uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition`;
+    miNodoTitle.className = `uppercase font-medium text-xl text-center mb-2 text-gray-800 hover:text-primary transition`;
     miNodoTitle.textContent = info.nombre;
     const miNodoImagen = document.createElement('img');
     miNodoImagen.setAttribute('src', info.imagen);
@@ -70,10 +71,10 @@ function mostrarCarrito() {
       return itemId === item ? total += 1 : total;
     }, 0);
     const miNodo = document.createElement('li');
-    miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+    miNodo.className = `bg-black-100 shadow rounded overflow-hidden group w-full`;
     miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${moneda} ${miItem[0].precio.toFixed(2)} = ${moneda} ${numeroUnidadesItem * miItem[0].precio}`;
     const miBoton = document.createElement('button');
-    miBoton.className = 'w-5 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition';
+    miBoton.className = 'w-15 text-center text-green-800 bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition';
     miBoton.textContent = 'X';
     miBoton.style.marginLeft = '1rem';
     miBoton.dataset.item = item;
@@ -91,6 +92,7 @@ function borrarItemCarrito(evento) {
     return carritoId !== id;
   });
   mostrarCarrito();
+  guardarCarritoEnLocalStorage();
 }
 
 function calcularTotal() {
@@ -103,13 +105,27 @@ function calcularTotal() {
   }, 0).toFixed(2);
 }
 
+function guardarCarritoEnLocalStorage(){
+  //debugger
+  myLocalStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
 function vaciarCarrito() {
   //debugger
   carrito = [];
   mostrarCarrito();
+  localStorage.clear();
+}
+
+function agregarCaritoDeLocalStorage() {
+  //debugger
+  if(myLocalStorage.getItem("carrito") != null){
+    carrito = JSON.parse(myLocalStorage.getItem("carrito"))
+  }
 }
 
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
+agregarCaritoDeLocalStorage();
 listarBoxes();
 mostrarCarrito();

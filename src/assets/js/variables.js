@@ -6,6 +6,7 @@ const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
 let numOfItemsCart = document.getElementById("numOfItemsCart");
+let numeroUnidadesItem = document.getElementById("numOfItemsCart");
 numOfItemsCart.textContent = `${numeroUnidadesItem}`;
 
 const inputNombre = document.querySelector("#inputNombre");
