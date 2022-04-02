@@ -18,3 +18,5 @@ const cargarBoxesDestacadas = () => {
 };
 
 cargarBoxesDestacadas();
+agregarCarritoDeLocalStorage();
+mostrarCarrito();

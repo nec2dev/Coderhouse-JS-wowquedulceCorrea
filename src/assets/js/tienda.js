@@ -130,3 +130,4 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 listarBoxes();
 mostrarCarrito();
 agregarCaritoDeLocalStorage();
+

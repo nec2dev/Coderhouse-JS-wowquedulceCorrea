@@ -199,12 +199,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let numeroUnidadesItem = document.getElementById("numOfItemsCart");
   numOfItemsCart.textContent = `${numeroUnidadesItem}`;
 
-  //   const inputNombre = document.querySelector("#inputNombre");
-  //   const inputTelefono = document.querySelector("#inputTelefono");
-  //   const inputEmail = document.querySelector("#inputEmail");
-  //   const btnSubmit = document.querySelector("#submit");
+     const inputNombre = document.querySelector("#inputNombre");
+     const inputTelefono = document.querySelector("#inputTelefono");
+     const inputEmail = document.querySelector("#inputEmail");
+     const btnSubmit = document.querySelector("#submit");
 
-  //   let datosDeInput = "";
+     let datosDeInput = "";
 
   function listarBoxes() {
     //debugger
@@ -339,12 +339,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function agregarCarritoDeLocalStorage() {
     //debugger
-    if (myLocalStorage.getItem("carrito") !== null) {
-      carrito = JSON.parse(myLocalStorage.getItem("carrito"));
-    }
+    myLocalStorage.getItem("carrito") !== null ? carrito = JSON.parse(myLocalStorage.getItem("carrito")) : carrito=[];
   }
 
-  DOMbotonVaciar.addEventListener("click", vaciarCarrito);
+    DOMbotonVaciar.addEventListener("click", vaciarCarrito);
 
   agregarCarritoDeLocalStorage();
   listarBoxes();
