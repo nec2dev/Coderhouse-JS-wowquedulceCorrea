@@ -200,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const myLocalStorage = window.localStorage;
   let numOfItemsCart = document.getElementById("numOfItemsCart");
   let numeroUnidadesItem = document.getElementById("numOfItemsCart");
-  numOfItemsCart.textContent = `${numeroUnidadesItem}`;
 
      const inputNombre = document.querySelector("#inputNombre");
      const inputTelefono = document.querySelector("#inputTelefono");
@@ -216,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boxes.forEach((info) => {
       //Marco estructural de diseño con estilo de Tailwind
       const miNodo = document.createElement("div");
-      miNodo.className = `bg-secondary shadow rounded overflow-hidden group`;
+      miNodo.className = `bg-white shadow rounded overflow-hidden group`;
       //El cuerpo de la tarjeta
       const miNodoCardBody = document.createElement("div");
       miNodoCardBody.className = `relative`;
@@ -294,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "¡Producto agregado!",
       text: "El producto se ha agregado al carrito de compras",
       icon: "success",
+      background: "#f9dee9"
     });
   }
 

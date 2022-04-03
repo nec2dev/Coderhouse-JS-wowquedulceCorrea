@@ -798,10 +798,6 @@ h1, h2, h3, h4, h5, h6{
   grid-column: span 3 / span 3;
 }
 
-.m-1{
-  margin: 0.25rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1027,10 +1023,6 @@ h1, h2, h3, h4, h5, h6{
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.content-end{
-  align-content: flex-end;
-}
-
 .items-start{
   align-items: flex-start;
 }
@@ -1192,11 +1184,6 @@ h1, h2, h3, h4, h5, h6{
   border-bottom-left-radius: 0.25rem;
 }
 
-.rounded-l{
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
 .border{
   border-width: 1px;
 }
@@ -1283,14 +1270,14 @@ h1, h2, h3, h4, h5, h6{
   background-color: rgb(91 33 182 / var(--tw-bg-opacity));
 }
 
+.bg-secondary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 238 244 / var(--tw-bg-opacity));
+}
+
 .bg-terciary{
   --tw-bg-opacity: 1;
   background-color: rgb(103 78 167 / var(--tw-bg-opacity));
-}
-
-.bg-secondary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 228 217 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{
@@ -1385,11 +1372,6 @@ h1, h2, h3, h4, h5, h6{
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
-}
-
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .pl-12{

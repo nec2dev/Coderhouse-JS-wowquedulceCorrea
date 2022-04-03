@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Wow!</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.svg">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-secondary">
+    <!-- Header -->
+    <header class="py-4 shadow-sm bg-white0">
+        <div class="container flex items-center justify-between">
+            <!-- logo -->
+            <a href="../index.html">
+                <img src="../assets/images/logo.svg" class="w-32" alt="logo wow que dulce" />
+            </a>
+            <!-- searchbar -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text"
+                    class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+                    placeholder="Buscar" />
+                <button
+                    class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition">
+                    Buscar
+                </button>
+            </div>
+            <!-- shoppinigkart -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Lista Deseos</div>
+                    <span
+                        class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">3</span>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="text-xs leading-3">Carrito</div>
+                    <span class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">0</span>
+                </a>
+                <a href="./login.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cuenta</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- navbar -->
+    <nav class="bg-gray-400">
+        <div class="container flex">
+            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white">Todas las categorías</span>
+                <div
+                    class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="https://www.flaticon.com/free-icons/chocolate-box" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 001</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 002</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 003</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 004</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 005</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="" class="w-5 h-5 object-contain" alt="">
+                        <span class="ml-6 text-gray-600 text-sm">Box 006</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="../index.html" class="text-gray-200 hover:text-white transmition">Home</a>
+                    <a href="tienda.html" class="text-gray-200 hover:text-white transmition">Tienda</a>
+                    <a href="#" class="text-gray-200 hover:text-white transmition">Nosotros</a>
+                    <a href="#" class="text-gray-200 hover:text-white transmition">Contactos</a>
+                </div>
+                <a href="../pages/login.html"
+                    class="text-gray-200 hover:text-white transmition">Loguearse/Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- breadCrums -->
+    <div class="container py-4 flex items-center">
+        <a href="../index.html" class="text-primary text-base">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="text-sm text-gray-400">
+            <i class="fa fa-chevron-right"></i>
+        </span>
+        <p class="text-gray-600 font-medium"> Tienda</p>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+        <div class="container grid grid-cols-3">
+            <div class="col-span-1 space-y-8">
+                <img src="../assets/images/logo.svg" class="w-32" alt="">
+                <p class="text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam exercitationem odit rem
+                    est
+                    minima,
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-span-2 grid grid-cols-4 gap-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soluciones</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Soporte</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Presupuestos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentación</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guía</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- copyright -->
+    <div class="bg-gray-800 py-4">
+        <div class="container flex items-center justify-between">
+            <p class="text-white">@nec2solutions - All Rights reserved</p>
+        </div>
+    </div>
+
+    <!-- JSs linked -->
+    <script src="../assets/js/localstorage.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</body>
+
+</html>

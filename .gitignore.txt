@@ -1,0 +1,4 @@
+src\assets\js\bbdd.js
+src\assets\js\localst.js
+src\assets\js\login.js
+src\assets\js\variables.js
