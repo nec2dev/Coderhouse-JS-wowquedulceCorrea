@@ -19,7 +19,8 @@ module.exports = {
       colors:{ 
         'primary': '#FD3057',
         'secondary': '#ffe4d9',
-        'checkout': '#b5ffde'
+        'terciary': '#674EA7',
+        'checkout': '#9ee558'
 
       }
     },

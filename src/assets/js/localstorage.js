@@ -220,13 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
       //El cuerpo de la tarjeta
       const miNodoCardBody = document.createElement("div");
       miNodoCardBody.className = `relative`;
-      const miNodoRollOver = document.createElement("div");
-      miNodoRollOver.style.backgroundImage = `url("../assets/images/box001.jpg")`;
-      miNodoRollOver.className = `"absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition`;
-      miNodoRollOver.innerHTML =
-        "<a href='#' class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition'>" +
-        "<i class='fas fa-search'></i></a><a href='#'class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition'>" +
-        "<i class='fas fa-heart'></i></a>";
       //El título de la box
       const miNodoTitle = document.createElement("h4");
       miNodoTitle.className = `uppercase font-medium text-xl text-center mb-2 text-gray-800 hover:text-primary transition`;
@@ -234,6 +227,15 @@ document.addEventListener("DOMContentLoaded", () => {
       //La imagen de la box
       const miNodoImagen = document.createElement("img");
       miNodoImagen.setAttribute("src", info.imagen);
+      //Efecto rollOver
+      const miNodoRollOver = document.createElement("div");
+      //miNodoRollOver.className = `"absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition`;
+      miNodoRollOver.innerHTML =
+        "<div class='h-90 inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition'>"+
+        "<a href='#' class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>" +
+        "<i class='fas fa-search'></i></a><a href='#'class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>" +
+        "<i class='fas fa-heart'></i></a></div>" +
+        ""
       //El precio de oferta de la box
       const miNodoPrecio = document.createElement("p");
       miNodoPrecio.className = `text-xl text-primary font-semibold text-center`;
@@ -269,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //Agregamos los nodos al DOM
       miNodoCardBody.appendChild(miNodoImagen);
-      miNodoCardBody.append(miNodoRollOver);
+      miNodoCardBody.appendChild(miNodoRollOver);
       miNodoCardBody.appendChild(miNodoTitle);
       miNodoCardBody.appendChild(miNodoPrecio);
       miNodoCardBody.appendChild(miNodoPrecioAnterior);
@@ -288,6 +290,11 @@ document.addEventListener("DOMContentLoaded", () => {
     carrito.push(evento.target.getAttribute("marcador"));
     mostrarCarrito();
     guardarCarritoEnLocalStorage();
+    swal({
+      title: "¡Producto agregado!",
+      text: "El producto se ha agregado al carrito de compras",
+      icon: "success",
+    });
   }
 
   //Muestra el carrito de compra
@@ -303,17 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return itemId === item ? (total += 1) : total;
       }, 0);
       const miNodo = document.createElement("li");
-      miNodo.className = `bg-black-100 shadow rounded overflow-hidden group w-full`;
-      miNodo.textContent = `${numeroUnidadesItem} x ${
-        miItem[0].nombre
-      } - ${moneda} ${miItem[0].precio.toFixed(2)} = ${moneda} ${
-        numeroUnidadesItem * miItem[0].precio
-      }`;
+      miNodo.className = `bg-black-100 shadow rounded overflow-hidden group w-full my-4`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${moneda} ${miItem[0].precio.toFixed(2)} = ${moneda} ${numeroUnidadesItem * miItem[0].precio}`;
       const miBoton = document.createElement("button");
-      miBoton.className =
-        "w-15 text-center text-green-800 bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition";
       miBoton.textContent = "X";
-      miBoton.style.marginLeft = "1rem";
+      miBoton.className = "mx-4 px-3 py-2 bg-primary rounded-lg hover:bg-transparent hover:text-primary transition";
       miBoton.dataset.item = item;
       miBoton.addEventListener("click", borrarItemCarrito);
       miNodo.appendChild(miBoton);
@@ -352,6 +353,12 @@ document.addEventListener("DOMContentLoaded", () => {
     carrito = [];
     mostrarCarrito();
     localStorage.clear();
+    swal({
+      title: "¡Ojo!",
+      text: "Se van a eliminar todos los productos del carrito de compras",
+      icon: "warning",
+      buttons: ["No, no quiero eliminar nada!","Si, estoy seguro!"],
+    });
   }
 
   //Funciones del localStorage
@@ -366,9 +373,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
     DOMbotonVaciar.addEventListener("click", vaciarCarrito);
+    
 
   //Eventos
   agregarCarritoDeLocalStorage();
   listarBoxes();
   mostrarCarrito();
+
 });
+

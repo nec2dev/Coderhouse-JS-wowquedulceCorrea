@@ -112,7 +112,7 @@
         </div>
     </nav>
 
-    <!-- breadcrums -->
+    <!-- breadCrums -->
     <div class="container py-4 flex items-center">
         <a href="../index.html" class="text-primary text-base">
             <i class="fas fa-home"></i>
@@ -306,8 +306,10 @@
             <div>
                 <h2 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">Carrito</h2>
                 <ul id="carrito"></ul>
-                <p class="block w-full py-1 text-xl text-center text-white bg-checkout border border-checkout rounded-b hover:bg-transparent hover:text-checkout transition"><strong>Total: $<span id="total"></strong></span></p>
-                <button class="block w-100 py-5 text-xl text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition" id="boton-vaciar">Vaciar</button>
+                <div class="h-6"></div>
+                <p class="block w-full py-1 text-xl text-center text-white bg-checkout border border-checkout rounded-lg hover:bg-transparent hover:text-checkout transition"><strong>Total: $<span id="total"></strong></span></p>
+                <div class="h-6"></div>
+                <button class="block w-300 py-1 px-6 text-xl text-center text-white bg-terciary rounded-lg hover:bg-transparent hover:text-terciary transition" id="boton-vaciar">Vaciar</button>
             </div>
         </div>
     </div>
@@ -394,13 +396,13 @@
         </div>
     </div>
 
-    <!-- JS linked -->
+    <!-- JSs linked -->
     <!-- <script src="../assets/js/bbdd.js"></script>
     <script src="../assets/js/variables.js"></script>
     <script src="../assets/js/tienda.js"></script>
     <script src="../assets/js/localst.js"></script> -->
     <script src="../assets/js/localstorage.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
