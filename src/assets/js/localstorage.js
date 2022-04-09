@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const myLocalStorage = window.localStorage;
   let numOfItemsCart = document.getElementById("numOfItemsCart");
   let numeroUnidadesItem = document.getElementById("numOfItemsCart");
+  var boxesjson = JSON.stringify(boxes)
 
   const inputNombre = document.querySelector("#inputNombre");
   const inputTelefono = document.querySelector("#inputTelefono");
@@ -402,15 +403,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   const lista = document.querySelector("#listado");
-  fetch("./data.json")
+  fetch(boxesjson)
     .then((res) => res.json())
     .then((data) => {
-      data.forEach((producto) => {
+      data.forEach((boxesjson) => {
         const li = document.createElement("li");
         li.innerHTML = `
-                    <h4>${producto.precio}</h4>
-                    <p>${producto.nombre}</p>
-                    <p>Código: ${producto.id}</p>
+                    <h4>${boxesjson.precio}</h4>
+                    <p>${boxesjson.nombre}</p>
+                    <p>Código: ${boxesjson.id}</p>
                     <hr/>
                 `;
 
