@@ -201,15 +201,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let numOfItemsCart = document.getElementById("numOfItemsCart");
   let numeroUnidadesItem = document.getElementById("numOfItemsCart");
 
-     const inputNombre = document.querySelector("#inputNombre");
-     const inputTelefono = document.querySelector("#inputTelefono");
-     const inputEmail = document.querySelector("#inputEmail");
-     const btnSubmit = document.querySelector("#submit");
+  const inputNombre = document.querySelector("#inputNombre");
+  const inputTelefono = document.querySelector("#inputTelefono");
+  const inputEmail = document.querySelector("#inputEmail");
+  const btnSubmit = document.querySelector("#submit");
 
-     let datosDeInput = "";
+  let datosDeInput = "";
 
   // Funciones de la tienda
-  // Renderiza todos los productos desde la base de datos. 
+  // Renderiza todos los productos desde la base de datos.
   function listarBoxes() {
     //debugger
     boxes.forEach((info) => {
@@ -230,11 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const miNodoRollOver = document.createElement("div");
       //miNodoRollOver.className = `"absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition`;
       miNodoRollOver.innerHTML =
-        "<div class='h-90 inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition'>"+
+        "<div class='h-90 inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition'>" +
         "<a href='#' class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>" +
         "<i class='fas fa-search'></i></a><a href='#'class='text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-400 transition'>" +
         "<i class='fas fa-heart'></i></a></div>" +
-        ""
+        "";
       //El precio de oferta de la box
       const miNodoPrecio = document.createElement("p");
       miNodoPrecio.className = `text-xl text-primary font-semibold text-center`;
@@ -293,12 +293,12 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "¡Producto agregado!",
       text: "El producto se ha agregado al carrito de compras",
       icon: "success",
-      background: "#f9dee9"
+      background: "#f9dee9",
     });
   }
 
   //Muestra el carrito de compra
-    function mostrarCarrito() {
+  function mostrarCarrito() {
     //debugger
     DOMcarrito.textContent = "";
     const carritoSinDuplicados = [...new Set(carrito)];
@@ -311,10 +311,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 0);
       const miNodo = document.createElement("li");
       miNodo.className = `bg-black-100 shadow rounded overflow-hidden group w-full my-4`;
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${moneda} ${miItem[0].precio.toFixed(2)} = ${moneda} ${numeroUnidadesItem * miItem[0].precio}`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${
+        miItem[0].nombre
+      } - ${moneda} ${miItem[0].precio.toFixed(2)} = ${moneda} ${
+        numeroUnidadesItem * miItem[0].precio
+      }`;
       const miBoton = document.createElement("button");
       miBoton.textContent = "X";
-      miBoton.className = "mx-4 px-3 py-2 bg-primary rounded-lg hover:bg-transparent hover:text-primary transition";
+      miBoton.className =
+        "mx-4 px-3 py-2 bg-primary rounded-lg hover:bg-transparent hover:text-primary transition";
       miBoton.dataset.item = item;
       miBoton.addEventListener("click", borrarItemCarrito);
       miNodo.appendChild(miBoton);
@@ -357,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "¡Ojo!",
       text: "Se van a eliminar todos los productos del carrito de compras",
       icon: "warning",
-      buttons: ["No, no quiero eliminar nada!","Si, estoy seguro!"],
+      buttons: ["No, no quiero eliminar nada!", "Si, estoy seguro!"],
     });
   }
 
@@ -369,34 +374,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function agregarCarritoDeLocalStorage() {
     //debugger
-    myLocalStorage.getItem("carrito") !== null ? carrito = JSON.parse(myLocalStorage.getItem("carrito")) : carrito=[];
+    myLocalStorage.getItem("carrito") !== null
+      ? (carrito = JSON.parse(myLocalStorage.getItem("carrito")))
+      : (carrito = []);
   }
 
-    DOMbotonVaciar.addEventListener("click", vaciarCarrito);
+  DOMbotonVaciar.addEventListener("click", vaciarCarrito);
 
   // función que tras 2 segundo retorna un array de objetos
   const pedirProductos = () => {
-    return new Promise( (resolve, reject) => {
-        setTimeout(() => {
-            resolve(boxes)
-        }, 2000)
-    })
-  }
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(boxes);
+      }, 2000);
+    });
+  };
 
-// inicializamos con un array vacío
-let productos = []
-const renderProductos = (arr) => {
-  listarBoxes();
-}
-// asincrónicamente pedimos los datos y generamos la vista
-pedirProductos()
-    .then((res) => {
-        productos = res
-        renderProductos(productos)
-    })
+  // inicializamos con un array vacío
+  let productos = [];
+  const renderProductos = (arr) => {
+    listarBoxes();
+  };
+  // asincrónicamente pedimos los datos y generamos la vista
+  pedirProductos().then((res) => {
+    productos = res;
+    renderProductos(productos);
+  });
+  
+  const lista = document.querySelector("#listado");
+  fetch("./data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((producto) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+                    <h4>${producto.precio}</h4>
+                    <p>${producto.nombre}</p>
+                    <p>Código: ${producto.id}</p>
+                    <hr/>
+                `;
+
+        lista.append(li);
+      });
+    });
 
   //Eventos
   agregarCarritoDeLocalStorage();
   mostrarCarrito();
 });
-
