@@ -1,5 +1,3 @@
-let carrito = [];
-let listadeDeseos = [];
 const moneda = "$";
 const DOMitems = document.querySelector("#items");
 const DOMcarrito = document.querySelector("#carrito");
@@ -11,3 +9,5 @@ const inputTelefono = document.querySelector("#inputTelefono");
 const inputEmail = document.querySelector("#inputEmail");
 const btnSubmit = document.querySelector("#submit");
 let datosDeInput = "";
+let carrito = [];
+let listadeDeseos = [];

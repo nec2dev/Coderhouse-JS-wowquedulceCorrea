@@ -156,58 +156,44 @@ document.addEventListener("DOMContentLoaded", () => {
       buttons: ["No, no quiero eliminar nada!", "Si, estoy seguro!"],
     });
   }
-
-  //Funciones del localStorage
-  function guardarCarritoEnLocalStorage() {
-    //debugger
-    myLocalStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-
-  function agregarCarritoDeLocalStorage() {
-    //debugger
-    myLocalStorage.getItem("carrito") !== null
-      ? (carrito = JSON.parse(myLocalStorage.getItem("carrito")))
-      : (carrito = []);
-  }
-
   DOMbotonVaciar.addEventListener("click", vaciarCarrito);
 
   // función que tras 2 segundo retorna un array de objetos
-  const pedirProductos = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(boxes);
-      }, 2000);
-    });
-  };
+   const pedirProductos = () => {
+     return new Promise((resolve, reject) => {
+       setTimeout(() => {
+         resolve(boxes);
+       }, 2000);
+     });
+   };
 
-  // inicializamos con un array vacío
-  let productos = [];
-  const renderProductos = (arr) => {
-    listarBoxes();
-  };
-  // asincrónicamente pedimos los datos y generamos la vista
-  pedirProductos().then((res) => {
-    productos = res;
-    renderProductos(productos);
-  });
+   //inicializamos con un array vacío
+   let productos = [];
+   const renderProductos = (arr) => {
+     listarBoxes();
+   };
+   // asincrónicamente pedimos los datos y generamos la vista
+   pedirProductos().then((res) => {
+     productos = res;
+     renderProductos(productos);
+   });
   
-  const lista = document.querySelector("#listado");
-  fetch(boxesjson)
-    .then((res) => res.json())
-    .then((data) => {
-      data.forEach((boxesjson) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-                    <h4>${boxesjson.precio}</h4>
-                    <p>${boxesjson.nombre}</p>
-                    <p>Código: ${boxesjson.id}</p>
-                    <hr/>
-                `;
+  // const lista = document.querySelector("#listado");
+  // fetch(boxesjson)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     data.forEach((boxesjson) => {
+  //       const li = document.createElement("li");
+  //       li.innerHTML = `
+  //                   <h4>${boxesjson.precio}</h4>
+  //                   <p>${boxesjson.nombre}</p>
+  //                   <p>Código: ${boxesjson.id}</p>
+  //                   <hr/>
+  //               `;
 
-        lista.append(li);
-      });
-    });
+  //       lista.append(li);
+  //     });
+  //   });
 
   //Eventos
   agregarCarritoDeLocalStorage();
