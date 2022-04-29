@@ -187,9 +187,4 @@ const boxes = [
     },
   ];
 
-// let boxes = [];
-// boxes = fetch("../assets/js/data.json")
-// .then(response => {
-//   return response.json();
-// })
-// .then(boxes => console.log(boxes));
+

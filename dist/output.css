@@ -408,7 +408,7 @@ object {
 }
 
 /*
-Constrain img and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
 img,
@@ -1255,9 +1255,19 @@ h1, h2, h3, h4, h5, h6{
   background-color: rgb(158 229 88 / var(--tw-bg-opacity));
 }
 
+.bg-terciary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(103 78 167 / var(--tw-bg-opacity));
+}
+
 .bg-gray-800{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-secondary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 238 244 / var(--tw-bg-opacity));
 }
 
 .bg-blue-800{
@@ -1268,16 +1278,6 @@ h1, h2, h3, h4, h5, h6{
 .bg-violet-800{
   --tw-bg-opacity: 1;
   background-color: rgb(91 33 182 / var(--tw-bg-opacity));
-}
-
-.bg-secondary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 238 244 / var(--tw-bg-opacity));
-}
-
-.bg-terciary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(103 78 167 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-40{
@@ -1357,11 +1357,6 @@ h1, h2, h3, h4, h5, h6{
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-2{
@@ -1540,11 +1535,6 @@ h1, h2, h3, h4, h5, h6{
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
-.text-green-800{
-  --tw-text-opacity: 1;
-  color: rgb(22 101 52 / var(--tw-text-opacity));
-}
-
 .line-through{
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
@@ -1652,6 +1642,11 @@ h1, h2, h3, h4, h5, h6{
   color: rgb(158 229 88 / var(--tw-text-opacity));
 }
 
+.hover\:text-terciary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(103 78 167 / var(--tw-text-opacity));
+}
+
 .hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1660,11 +1655,6 @@ h1, h2, h3, h4, h5, h6{
 .hover\:text-gray-900:hover{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.hover\:text-terciary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(103 78 167 / var(--tw-text-opacity));
 }
 
 .focus\:border-primary:focus{
